@@ -1,5 +1,3 @@
-import WebsiteScreenshot from './WebsiteScreenshot';
-
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -7,7 +5,6 @@ interface ProjectCardProps {
   url?: string;
   preview?: React.ReactNode;
   tags?: string[];
-  showScreenshot?: boolean;
 }
 
 export default function ProjectCard({ 
@@ -16,8 +13,7 @@ export default function ProjectCard({
   type, 
   url, 
   preview, 
-  tags = [],
-  showScreenshot = false
+  tags = []
 }: ProjectCardProps) {
   const cardContent = (
     <div className="bg-gray-900 border border-gray-800 hover:border-gray-600 transition-all duration-300 p-6 group relative overflow-hidden">
@@ -34,16 +30,6 @@ export default function ProjectCard({
           {description}
         </p>
       </div>
-
-      {showScreenshot && url && (
-        <div className="mb-4 border border-gray-800 rounded overflow-hidden">
-          <WebsiteScreenshot 
-            url={url} 
-            alt={`Screenshot of ${title}`}
-            className="h-48 w-full"
-          />
-        </div>
-      )}
 
       {preview && (
         <div className="mb-4 bg-black border border-gray-800 p-4">
