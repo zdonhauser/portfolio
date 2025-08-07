@@ -67,15 +67,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
 
         {/* Main Content Area - Takes up most of the space */}
         <div className="flex-1 flex items-center justify-center p-4 min-h-0">
-          {project.type === 'external' && project.url ? (
-            <iframe
-              src={project.url}
-              title={project.title}
-              className="w-full h-full border border-gray-700 rounded bg-white"
-              loading="lazy"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-            />
-          ) : project.images && project.images.length > 0 ? (
+          {project.images && project.images.length > 0 ? (
             <ImageCarousel 
               images={project.images}
               className="w-full h-full max-h-full"
@@ -89,39 +81,32 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
         </div>
 
         {/* Bottom Details Panel - Compact */}
-        <div className="flex-shrink-0 bg-gray-800/90 backdrop-blur-sm border-t border-gray-700 p-6">
+        <div className="flex-shrink-0 bg-gray-800/90 backdrop-blur-sm border-t border-gray-700 p-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-              {/* Project Info */}
-              <div className="lg:col-span-2">
-                <h2 className="text-2xl font-light text-white tracking-wide mb-2">
-                  {project.title}
-                </h2>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  {project.description}
-                </p>
-              </div>
+            <div className="flex items-center justify-between">
+              {/* Project Title */}
+              <h2 className="text-xl font-light text-white tracking-wide">
+                {project.title}
+              </h2>
 
               {/* Tags and Actions */}
-              <div className="space-y-4">
+              <div className="flex items-center space-x-4">
                 {/* Tags */}
                 {project.tags && project.tags.length > 0 && (
-                  <div>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, index) => (
-                        <span 
-                          key={index}
-                          className="px-2 py-1 text-xs text-gray-300 border border-gray-700 hover:border-gray-500 transition-colors tracking-wide uppercase"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, index) => (
+                      <span 
+                        key={index}
+                        className="px-2 py-1 text-xs text-gray-300 border border-gray-700 hover:border-gray-500 transition-colors tracking-wide uppercase"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 )}
 
                 {/* Actions */}
-                <div className="flex items-center justify-start">
+                <div className="flex items-center">
                   {project.type === 'external' && project.url && (
                     <a
                       href={project.url}
@@ -129,7 +114,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 bg-white text-black px-4 py-2 hover:bg-gray-200 transition-colors tracking-wide uppercase text-xs font-medium"
                     >
-                      <span>Open in New Tab</span>
+                      <span>View Live Site</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
