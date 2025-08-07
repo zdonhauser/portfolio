@@ -5,6 +5,7 @@ interface ProjectCardProps {
   url?: string;
   preview?: React.ReactNode;
   tags?: string[];
+  onClick?: () => void;
 }
 
 export default function ProjectCard({ 
@@ -13,7 +14,8 @@ export default function ProjectCard({
   type, 
   url, 
   preview, 
-  tags = []
+  tags = [],
+  onClick
 }: ProjectCardProps) {
   const cardContent = (
     <div className="bg-gray-900 border border-gray-800 hover:border-gray-600 transition-all duration-300 p-6 group relative overflow-hidden">
@@ -65,22 +67,12 @@ export default function ProjectCard({
     </div>
   );
 
-  if (type === 'external' && url) {
-    return (
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block hover:translate-y-[-4px] transition-all duration-300"
-      >
-        {cardContent}
-      </a>
-    );
-  }
-
   return (
-    <div className="hover:translate-y-[-4px] transition-all duration-300">
+    <button
+      onClick={onClick}
+      className="block w-full text-left hover:translate-y-[-4px] transition-all duration-300 cursor-pointer"
+    >
       {cardContent}
-    </div>
+    </button>
   );
 }
