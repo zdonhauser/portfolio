@@ -39,7 +39,7 @@ export default function Home() {
       description: "Revamped amusement park website using Shopify Hydrogen with React 18, TypeScript, GraphQL, Vite, Tailwind, and React Router v7. Deployed via Shopify Oxygen with integrated ticketing system.",
       type: "external",
       url: "https://react.zdtamusement.com",
-      tags: ["React", "TypeScript", "Shopify Hydrogen", "GraphQL", "Tailwind"],
+      tags: ["React", "TypeScript", "Shopify Hydrogen", "GraphQL", "Tailwind", "Vite", "React Router v7", "Shopify Oxygen"],
       images: [
         {
           src: "/screenshots/zdtamusement.png",
@@ -51,7 +51,7 @@ export default function Home() {
       title: "Point of Sale System",
       description: "Custom POS system for ticketing and fast-service food environments built with React and Node.js, packaged in Electron for system-level storage and direct peripheral access.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL"],
+      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "GraphQL"],
       images: [
         {
           src: "/screenshots/pos.png",
@@ -67,7 +67,7 @@ export default function Home() {
       title: "Kitchen Display System",
       description: "Real-time KDS with synchronized front-of-house and back-of-house order lifecycle management using webhooks. Streamlines food service operations with live order tracking.",
       type: "preview",
-      tags: ["React", "Node.js", "WebHooks", "Real-time"],
+      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "WebSockets"],
       images: [
         {
           src: "/screenshots/kds.png",
@@ -79,7 +79,7 @@ export default function Home() {
       title: "Employee Time Tracking",
       description: "Employee clock-in terminal and time tracking tools with administrative controls for industry-specific hours handling and live time-clock monitoring.",
       type: "preview",
-      tags: ["Electron", "PostgreSQL", "Admin Controls"],
+      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron"],
       images: [
         {
           src: "/screenshots/timeclock.png",
@@ -99,7 +99,7 @@ export default function Home() {
       title: "Membership Management",
       description: "Comprehensive membership access management system with recurring billing options via Shopify integration. Handles member check-ins and subscription management.",
       type: "preview",
-      tags: ["Shopify", "Billing", "Membership"],
+      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "Shopify API", "GraphQL"],
       images: [
         {
           src: "/screenshots/members.png",
@@ -111,7 +111,7 @@ export default function Home() {
       title: "Mobile Party Booking PWA",
       description: "Progressive Web App for mobile party and group booking with remote availability access. Streamlines the booking process for special events and group visits.",
       type: "preview",
-      tags: ["PWA", "Mobile", "Booking System"]
+      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "Progressive Web App", "GraphQL"]
     }
   ];
   return (
@@ -165,10 +165,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-gray-300 leading-relaxed font-light">
-                Full stack software engineer with over a decade of leadership experience running a family-owned 
-                amusement park, where I played a key role on the executive team while leading the design and 
-                development of a fully integrated POS and operations platform.
-              </p>
+              Full stack software engineer with a proven track record of delivering and maintaining production systems that power live businesses. Proficient in React, Node.js, Express, and PostgreSQL, with a focus on usability, performance, and continuous iteration. Designed and built a fully integrated POS and operations platform for a multi-department amusement park, supporting daily ticketing, event and party booking, food service, memberships, and employee time tracking. I take a user-centered approach to development, blending technical expertise with functional design, and bring cross-functional leadership experience that equips me for roles requiring both engineering excellence and strategic collaboration.              </p>
             </div>
           </div>
         </div>
