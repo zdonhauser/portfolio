@@ -11,6 +11,7 @@ interface ProjectData {
   description: string;
   type: 'external' | 'preview';
   url?: string;
+  githubUrl?: string;
   preview?: React.ReactNode;
   tags?: string[];
   images?: {
@@ -39,6 +40,7 @@ export default function Home() {
       description: "Revamped amusement park website using Shopify Hydrogen with React 18, TypeScript, GraphQL, Vite, Tailwind, and React Router v7. Deployed via Shopify Oxygen with integrated ticketing system.",
       type: "external",
       url: "https://react.zdtamusement.com",
+      githubUrl: "https://github.com/zdonhauser/zdt-hydrogen",
       tags: ["React", "TypeScript", "Shopify Hydrogen", "GraphQL", "Tailwind", "Vite", "React Router v7", "Shopify Oxygen"],
       images: [
         {
@@ -49,9 +51,10 @@ export default function Home() {
     },
     {
       title: "Point of Sale System",
-      description: "Custom POS system for ticketing and fast-service food environments built with React and Node.js, packaged in Electron for system-level storage and direct peripheral access.",
+      description: "Custom POS system for ticketing and fast-service food environments built with React and Node.js. Features comprehensive order management, payment processing, and inventory tracking.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "GraphQL"],
+      githubUrl: "https://github.com/zdonhauser/posdashboard-public",
+      tags: ["React", "Node.js", "PostgreSQL", "GraphQL", "REST API", "Payment Processing"],
       images: [
         {
           src: "/screenshots/pos.png",
@@ -65,9 +68,10 @@ export default function Home() {
     },
     {
       title: "Kitchen Display System",
-      description: "Real-time KDS with synchronized front-of-house and back-of-house order lifecycle management using webhooks. Streamlines food service operations with live order tracking.",
+      description: "Real-time Kitchen Display System with synchronized front-of-house and back-of-house order lifecycle management using webhooks. Streamlines food service operations with live order tracking.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "WebSockets"],
+      githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/KDS",
+      tags: ["React", "Node.js", "PostgreSQL", "WebSockets", "Real-time Updates", "Webhooks"],
       images: [
         {
           src: "/screenshots/kds.png",
@@ -79,7 +83,8 @@ export default function Home() {
       title: "Employee Time Tracking",
       description: "Employee clock-in terminal and time tracking tools with administrative controls for industry-specific hours handling and live time-clock monitoring.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron"],
+      githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/ClockIn",
+      tags: ["React", "Node.js", "PostgreSQL", "Authentication", "Role Management", "Reporting"],
       images: [
         {
           src: "/screenshots/timeclock.png",
@@ -99,7 +104,8 @@ export default function Home() {
       title: "Membership Management",
       description: "Comprehensive membership access management system with recurring billing options via Shopify integration. Handles member check-ins and subscription management.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "Shopify API", "GraphQL"],
+      githubUrl: "https://github.com/zdonhauser/posdashboard-public",
+      tags: ["React", "Node.js", "PostgreSQL", "Shopify API", "GraphQL", "Subscription Management"],
       images: [
         {
           src: "/screenshots/members.png",
@@ -108,10 +114,17 @@ export default function Home() {
       ]
     },
     {
-      title: "Mobile Party Booking PWA",
-      description: "Progressive Web App for mobile party and group booking with remote availability access. Streamlines the booking process for special events and group visits.",
+      title: "Electron Business Platform",
+      description: "Comprehensive Electron wrapper providing system-level access and peripheral integration for POS operations. Enables direct hardware communication, local storage, and unified access to all business management systems.",
       type: "preview",
-      tags: ["React", "Node.js", "Electron", "PostgreSQL", "Electron", "Progressive Web App", "GraphQL"]
+      githubUrl: "https://github.com/zdonhauser/electronpos-public",
+      tags: ["Electron", "Node.js", "Hardware Integration", "System APIs", "Cross-Platform", "Business Operations"],
+      images: [
+        {
+          src: "/screenshots/pos.png",
+          alt: "Electron Business Platform - POS Integration"
+        }
+      ]
     }
   ];
   return (
@@ -158,6 +171,9 @@ export default function Home() {
                 <a href="mailto:zac@donrey.dev" className="hover:text-white transition-colors border-b border-transparent hover:border-white">
                   zac@donrey.dev
                 </a>
+                <a href="https://github.com/zdonhauser" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors border-b border-transparent hover:border-white">
+                  GitHub
+                </a>
                 <a href="https://www.linkedin.com/in/zachary-donhauser/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors border-b border-transparent hover:border-white">
                   LinkedIn
                 </a>
@@ -189,6 +205,7 @@ export default function Home() {
               description={project.description}
               type={project.type}
               url={project.url}
+              githubUrl={project.githubUrl}
               tags={project.tags}
               preview={
                 project.images && project.images.length > 1 ? (
@@ -201,25 +218,6 @@ export default function Home() {
                     height={300}
                     className="w-full h-48 object-cover rounded"
                   />
-                ) : project.title === "Mobile Party Booking PWA" ? (
-                  <div className="flex items-center justify-center py-12">
-                    <div className="relative">
-                      {/* Mobile phone design */}
-                      <div className="w-12 h-20 border-2 border-gray-600 rounded relative">
-                        <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-px bg-gray-700"></div>
-                        <div className="absolute top-3 left-1 right-1 bottom-3 border border-gray-700">
-                          <div className="absolute top-1 left-1 right-1 h-1 bg-gray-700"></div>
-                          <div className="absolute top-3 left-1 right-1 h-px bg-gray-800"></div>
-                          <div className="absolute top-4 left-1 right-1 h-px bg-gray-800"></div>
-                          <div className="absolute bottom-1 right-1 w-3 h-2 border border-gray-700"></div>
-                        </div>
-                        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 border border-gray-700 rounded-full"></div>
-                      </div>
-                      <div className="text-center mt-4">
-                        <p className="text-xs text-gray-400 uppercase tracking-wide">Mobile PWA</p>
-                      </div>
-                    </div>
-                  </div>
                 ) : undefined
               }
               onClick={() => openModal(project)}
