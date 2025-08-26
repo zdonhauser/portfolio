@@ -20,25 +20,29 @@ interface ProjectModalProps {
       alt: string;
     }[];
   } | null;
+  onNextProject?: () => void;
+  onPreviousProject?: () => void;
 }
 
-export default function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
+export default function ProjectModal({ isOpen, onClose, project, onNextProject, onPreviousProject }: ProjectModalProps) {
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleKeydown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
       }
+      // Let ImageCarousel handle arrow keys for image navigation
+      // Project navigation will be handled by ImageCarousel when at boundaries
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
+      document.addEventListener('keydown', handleKeydown);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('keydown', handleKeydown);
       document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
@@ -71,8 +75,10 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
           {project.images && project.images.length > 0 ? (
             <ImageCarousel 
               images={project.images}
-              className="w-full h-full max-h-full"
+              className="flex items-center justify-center"
               size="fullscreen"
+              onNextProject={onNextProject}
+              onPreviousProject={onPreviousProject}
             />
           ) : project.preview ? (
             <div className="w-full h-full flex items-center justify-center bg-black border border-gray-800 rounded">

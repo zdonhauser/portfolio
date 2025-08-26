@@ -34,6 +34,22 @@ export default function Home() {
     setSelectedProject(null);
   };
 
+  const goToNextProject = () => {
+    if (selectedProject) {
+      const currentIndex = projects.findIndex(p => p.title === selectedProject.title);
+      const nextIndex = (currentIndex + 1) % projects.length;
+      setSelectedProject(projects[nextIndex]);
+    }
+  };
+
+  const goToPreviousProject = () => {
+    if (selectedProject) {
+      const currentIndex = projects.findIndex(p => p.title === selectedProject.title);
+      const previousIndex = (currentIndex - 1 + projects.length) % projects.length;
+      setSelectedProject(projects[previousIndex]);
+    }
+  };
+
   const projects: ProjectData[] = [
     {
       title: "ZDTs Amusement Park Website",
@@ -59,10 +75,6 @@ export default function Home() {
         {
           src: "/screenshots/pos.png",
           alt: "Point of Sale System Interface"
-        },
-        {
-          src: "/screenshots/menu.png",
-          alt: "POS Menu Management System"
         }
       ]
     },
@@ -123,6 +135,10 @@ export default function Home() {
         {
           src: "/screenshots/pos.png",
           alt: "Electron Business Platform - POS Integration"
+        },
+        {
+          src: "/screenshots/menu.png",
+          alt: "POS Menu Management System"
         }
       ]
     }
@@ -330,6 +346,8 @@ export default function Home() {
         isOpen={isModalOpen}
         onClose={closeModal}
         project={selectedProject}
+        onNextProject={goToNextProject}
+        onPreviousProject={goToPreviousProject}
       />
     </div>
   );
