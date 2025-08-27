@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import ImageCarousel from "@/components/ImageCarousel";
 import ProjectModal from "@/components/ProjectModal";
 import Image from "next/image";
+import { Analytics } from '@vercel/analytics/react';
 
 interface ProjectData {
   title: string;
@@ -343,6 +344,9 @@ export default function Home() {
         onNextProject={goToNextProject}
         onPreviousProject={goToPreviousProject}
       />
+      
+      {/* Analytics */}
+      <Analytics />
     </div>
   );
 }
