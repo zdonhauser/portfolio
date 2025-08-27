@@ -1,0 +1,20 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#1a1a1a"/>
+  
+  <!-- Simplified Crown -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Crown base -->
+    <line x1="6" y1="18" x2="26" y2="18"/>
+    
+    <!-- Crown outline -->
+    <path d="M 8 18 L 11 12 L 13 14 L 16 10 L 19 14 L 21 12 L 24 18"/>
+    
+    <!-- Crown decorative circles -->
+    <circle cx="11" cy="12" r="1" fill="#ffffff"/>
+    <circle cx="16" cy="10" r="1" fill="#ffffff"/>
+    <circle cx="21" cy="12" r="1" fill="#ffffff"/>
+  </g>
+  
+  <!-- D for DON REY -->
+  <text x="16" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="900" text-anchor="middle" fill="#ffffff">D</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .text-large { font-family: Arial, sans-serif; font-size: 72px; font-weight: 900; text-anchor: middle; fill: #ffffff; }
+      .text-small { font-family: Arial, sans-serif; font-size: 32px; font-weight: 400; text-anchor: middle; fill: #ffffff; letter-spacing: 2px; }
+    </style>
+  </defs>
+  
+  <rect width="400" height="400" fill="#1a1a1a"/>
+  
+  <!-- Crown -->
+  <g fill="none" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Crown base -->
+    <line x1="110" y1="165" x2="290" y2="165" stroke-width="8"/>
+    
+    <!-- Crown outline -->
+    <path d="M 130 165 L 150 115 L 170 135 L 200 95 L 230 135 L 250 115 L 270 165"/>
+    
+    <!-- Crown decorative circles -->
+    <circle cx="150" cy="115" r="6" fill="#ffffff"/>
+    <circle cx="200" cy="95" r="6" fill="#ffffff"/>
+    <circle cx="250" cy="115" r="6" fill="#ffffff"/>
+  </g>
+  
+  <!-- DON REY text -->
+  <text x="200" y="260" class="text-large">DON REY</text>
+  
+  <!-- DONREY.DEV text -->
+  <text x="200" y="305" class="text-small">DONREY.DEV</text>
+</svg>

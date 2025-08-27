@@ -86,11 +86,11 @@ export default function ProjectCard({
   );
 
   return (
-    <button
+    <div
       onClick={onClick}
       className="block w-full text-left hover:translate-y-[-4px] transition-all duration-300 cursor-pointer"
     >
       {cardContent}
-    </button>
+    </div>
   );
 }

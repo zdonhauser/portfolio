@@ -249,7 +249,10 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
           {size !== 'fullscreen' && (
             <>
               <button
-                onClick={goToPrevious}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToPrevious();
+                }}
                 className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 aria-label="Previous image"
               >
@@ -259,7 +262,10 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
               </button>
               
               <button
-                onClick={goToNext}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToNext();
+                }}
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200"
                 aria-label="Next image"
               >
@@ -347,7 +353,10 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
+            onClick={(e) => {
+              e.stopPropagation();
+              goToSlide(index);
+            }}
             className={`w-2 h-2 rounded-full transition-colors duration-200 ${
               index === currentIndex 
                 ? 'bg-white' 

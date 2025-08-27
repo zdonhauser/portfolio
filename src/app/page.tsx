@@ -158,13 +158,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-transparent pointer-events-none"></div>
           <div className="relative z-10">
             <div className="flex flex-col items-center mb-8">
-              <div className="w-32 h-32 mb-6">
+              <div className="w-40 h-40 mb-6 flex items-center justify-center">
                 <Image
-                  src="/screenshots/IMG_6801.jpg"
-                  alt="Zachary Donhauser"
-                  width={128}
-                  height={128}
-                  className="rounded-full object-cover w-full h-full border-4 border-white/20"
+                  src="/donrey_transparent.png"
+                  alt="Don Rey - Zachary Donhauser"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
@@ -173,15 +173,12 @@ export default function Home() {
             </div>
             <div className="mb-8">
               <div className="inline-flex items-center space-x-2 mb-4">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
                 <p className="text-2xl font-light tracking-wide">
                   Full Stack Software Engineer
                 </p>
-                <div className="w-2 h-2 bg-white rounded-full"></div>
               </div>
               <div className="flex justify-center items-center space-x-6 text-gray-300 text-sm">
                 <span className="flex items-center space-x-1">
-                  <div className="w-1 h-1 bg-gray-500 rounded-full"></div>
                   <span>Austin, TX</span>
                 </span>
                 <a href="mailto:zac@donrey.dev" className="hover:text-white transition-colors border-b border-transparent hover:border-white">
@@ -255,7 +252,6 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-2 h-2 bg-white mr-3"></div>
                   <h3 className="text-sm font-light text-white uppercase tracking-widest">
                     Languages & Frameworks
                   </h3>
@@ -270,7 +266,6 @@ export default function Home() {
               </div>
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-2 h-2 bg-white mr-3"></div>
                   <h3 className="text-sm font-light text-white uppercase tracking-widest">
                     Tools & Platforms
                   </h3>
@@ -285,7 +280,6 @@ export default function Home() {
               </div>
               <div>
                 <div className="flex items-center mb-6">
-                  <div className="w-2 h-2 bg-white mr-3"></div>
                   <h3 className="text-sm font-light text-white uppercase tracking-widest">
                     Styling & Databases
                   </h3>
