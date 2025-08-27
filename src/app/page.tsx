@@ -344,9 +344,6 @@ export default function Home() {
         onNextProject={goToNextProject}
         onPreviousProject={goToPreviousProject}
       />
-      
-      {/* Analytics */}
-      <Analytics />
     </div>
   );
 }
