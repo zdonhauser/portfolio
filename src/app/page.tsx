@@ -52,20 +52,7 @@ export default function Home() {
   };
 
   const projects: ProjectData[] = [
-    {
-      title: "ZDTs Amusement Park Website",
-      description: "Revamped amusement park website using Shopify Hydrogen with React 18, TypeScript, GraphQL, Vite, Tailwind, and React Router v7. Deployed via Shopify Oxygen with integrated ticketing system.",
-      type: "external",
-      url: "https://react.zdtamusement.com",
-      githubUrl: "https://github.com/zdonhauser/zdt-hydrogen",
-      tags: ["React", "TypeScript", "Shopify Hydrogen", "GraphQL", "Tailwind", "Vite", "React Router v7", "Shopify Oxygen"],
-      images: [
-        {
-          src: "/screenshots/zdtamusement.png",
-          alt: "ZDTs Amusement Park Website Screenshot"
-        }
-      ]
-    },
+
     {
       title: "Point of Sale System",
       description: "Custom POS system for ticketing and fast-service food environments built with React and Node.js. Features comprehensive order management, payment processing, and inventory tracking.",
@@ -142,7 +129,21 @@ export default function Home() {
           alt: "POS Menu Management System"
         }
       ]
-    }
+    },
+    {
+      title: "ZDTs Amusement Park Website",
+      description: "Revamped amusement park website using Shopify Hydrogen with React 18, TypeScript, GraphQL, Vite, Tailwind, and React Router v7. Deployed via Shopify Oxygen with integrated ticketing system.",
+      type: "external",
+      url: "https://react.zdtamusement.com",
+      githubUrl: "https://github.com/zdonhauser/zdt-hydrogen",
+      tags: ["React", "TypeScript", "Shopify Hydrogen", "GraphQL", "Tailwind", "Vite", "React Router v7", "Shopify Oxygen"],
+      images: [
+        {
+          src: "/screenshots/zdtamusement.png",
+          alt: "ZDTs Amusement Park Website Screenshot"
+        }
+      ]
+    },
   ];
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
