@@ -99,9 +99,9 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
 
   if (images.length === 1) {
     return (
-      <div className={`${className}`}>
+      <div className={`${className} ${size === 'fullscreen' ? 'h-full' : ''}`}>
         {/* Desktop Layout - Side buttons */}
-        <div className={`hidden md:flex items-center gap-6`}>
+        <div className={`hidden md:flex items-center gap-6 ${size === 'fullscreen' ? 'h-full' : ''}`}>
           {/* Previous Project Button - Desktop only */}
           {size === 'fullscreen' && onPreviousProject && (
             <button
@@ -116,19 +116,20 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
           )}
           
           {/* Image Container */}
-          <div className={`${size === 'fullscreen' ? 'flex-1 flex justify-center items-center' : ''}`}>
+          <div className={`${size === 'fullscreen' ? 'flex-1 flex justify-center items-center h-full' : ''}`}>
             <Image
               src={images[0].src}
               alt={images[0].alt}
               width={size === 'fullscreen' ? 1200 : size === 'modal' ? 800 : 400}
               height={size === 'fullscreen' ? 900 : size === 'modal' ? 600 : 300}
               className={
-                size === 'fullscreen' 
-                  ? "w-auto max-w-full max-h-full object-contain rounded"
-                  : size === 'modal' 
+                size === 'fullscreen'
+                  ? "max-w-full max-h-[calc(100vh-200px)] w-auto h-auto object-contain rounded"
+                  : size === 'modal'
                   ? "w-full h-auto max-h-96 object-contain rounded"
                   : "w-full h-48 object-cover rounded"
               }
+              style={size === 'fullscreen' ? { maxHeight: 'calc(100% - 2rem)' } : {}}
             />
           </div>
           
@@ -162,9 +163,9 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
               width={size === 'fullscreen' ? 1200 : size === 'modal' ? 800 : 400}
               height={size === 'fullscreen' ? 900 : size === 'modal' ? 600 : 300}
               className={
-                size === 'fullscreen' 
-                  ? "w-full max-w-full max-h-full object-contain rounded"
-                  : size === 'modal' 
+                size === 'fullscreen'
+                  ? "max-w-full max-h-[calc(100vh-250px)] w-auto h-auto object-contain rounded"
+                  : size === 'modal'
                   ? "w-full h-auto max-h-96 object-contain rounded"
                   : "w-full h-48 object-cover rounded"
               }
@@ -213,9 +214,9 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
   };
 
   return (
-    <div className={`${className}`}>
+    <div className={`${className} ${size === 'fullscreen' ? 'h-full' : ''}`}>
       {/* Desktop Layout - Side buttons */}
-      <div className={`hidden md:flex items-center gap-6`}>
+      <div className={`hidden md:flex items-center gap-6 ${size === 'fullscreen' ? 'h-full' : ''}`}>
         {/* Previous Navigation Button - Desktop only for fullscreen */}
         {size === 'fullscreen' && (
           <button
@@ -230,7 +231,7 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
         )}
         
         {/* Main Image Container */}
-        <div className={`relative overflow-hidden rounded group ${size === 'fullscreen' ? 'flex-1 flex justify-center items-center' : ''}`}>
+        <div className={`relative overflow-hidden rounded group ${size === 'fullscreen' ? 'flex-1 flex justify-center items-center h-full' : ''}`}>
           <Image
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
@@ -238,11 +239,12 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
             height={size === 'fullscreen' ? 900 : size === 'modal' ? 600 : 300}
             className={
               size === 'fullscreen'
-                ? "w-auto max-w-full max-h-full object-contain transition-all duration-300 rounded"
+                ? "max-w-full max-h-[calc(100vh-200px)] w-auto h-auto object-contain transition-all duration-300 rounded"
                 : size === 'modal'
                 ? "w-full h-auto max-h-96 object-contain transition-all duration-300 rounded"
                 : "w-full h-48 object-cover transition-all duration-300"
             }
+            style={size === 'fullscreen' ? { maxHeight: 'calc(100% - 2rem)' } : {}}
           />
           
           {/* Overlay arrows for non-fullscreen sizes */}
@@ -308,7 +310,7 @@ export default function ImageCarousel({ images, className = '', size = 'card', o
             height={size === 'fullscreen' ? 900 : size === 'modal' ? 600 : 300}
             className={
               size === 'fullscreen'
-                ? "w-full max-w-full max-h-full object-contain transition-all duration-300 rounded"
+                ? "max-w-full max-h-[calc(100vh-250px)] w-auto h-auto object-contain transition-all duration-300 rounded"
                 : size === 'modal'
                 ? "w-full h-auto max-h-96 object-contain transition-all duration-300 rounded"
                 : "w-full h-48 object-cover transition-all duration-300"

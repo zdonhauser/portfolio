@@ -80,6 +80,32 @@ export default function Home() {
       ]
     },
     {
+      title: "Daily Transaction Reports Dashboard",
+      description: "Daily Transaction Reports Dashboard with real-time updates via webhooks and Plotly visualizations.",
+      type: "preview",
+      githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/DailyDashboard",
+      tags: ["Plotly", "React", "Node.js", "PostgreSQL", "Webhooks", "Real-time Updates"],
+      images: [
+        {
+          src: "/screenshots/dailysales.png",
+          alt: "Daily Transaction Reports Dashboard Interface"
+        }
+      ]
+    },
+    {
+      title: "Webhooks Microservice",
+      description: "Webhooks Microservice syncing of Shopify transactions to a PostgreSQL database for real-time reporting and quick access to transaction data.",
+      type: "preview",
+      githubUrl: "https://github.com/zdonhauser/pos-webhooks",
+      tags: ["Node.js", "Shopify API", "Webhooks", "PostgreSQL", "Real-time Updates"],
+      images: [
+        {
+          src: "/screenshots/webhook.png",
+          alt: "Webhooks Screenshot"
+        }
+      ]
+    },
+    {
       title: "Employee Time Tracking",
       description: "Employee clock-in terminal and time tracking tools with administrative controls for industry-specific hours handling and live time-clock monitoring.",
       type: "preview",

@@ -71,11 +71,11 @@ export default function ProjectModal({ isOpen, onClose, project, onNextProject, 
         </button>
 
         {/* Main Content Area - Takes up most of the space */}
-        <div className="flex-1 flex items-center justify-center md:p-4 p-2 min-h-0">
+        <div className="flex-1 flex items-center justify-center md:p-4 p-2 min-h-0 overflow-hidden">
           {project.images && project.images.length > 0 ? (
-            <ImageCarousel 
+            <ImageCarousel
               images={project.images}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center w-full h-full"
               size="fullscreen"
               onNextProject={onNextProject}
               onPreviousProject={onPreviousProject}
