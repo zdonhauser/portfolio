@@ -101,7 +101,7 @@ export default function Home() {
       images: [
         {
           src: "/screenshots/webhook.png",
-          alt: "Webhooks Screenshot"
+          alt: "Webhooks Description Screenshot"
         }
       ]
     },
