@@ -55,7 +55,7 @@ export default function Home() {
 
     {
       title: "Point of Sale System",
-      description: "Custom POS system for ticketing and fast-service food environments built with React and Node.js. Features comprehensive order management, payment processing, and inventory tracking.",
+      description: "Custom POS system deployed in production at ZDT's Amusement Park in Texas. Built with React and Node.js for ticketing and fast-service food environments, featuring comprehensive order management, payment processing, and inventory tracking.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/posdashboard-public",
       tags: ["React", "Node.js", "PostgreSQL", "GraphQL", "REST API", "Payment Processing"],
@@ -68,7 +68,7 @@ export default function Home() {
     },
     {
       title: "Kitchen Display System",
-      description: "Real-time Kitchen Display System with synchronized front-of-house and back-of-house order lifecycle management using webhooks. Streamlines food service operations with live order tracking.",
+      description: "Real-time Kitchen Display System actively used in ZDT's Amusement Park food service operations. Features synchronized front-of-house and back-of-house order lifecycle management using webhooks with live order tracking.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/KDS",
       tags: ["React", "Node.js", "PostgreSQL", "WebSockets", "Real-time Updates", "Webhooks"],
@@ -81,7 +81,7 @@ export default function Home() {
     },
     {
       title: "Daily Transaction Reports Dashboard",
-      description: "Daily Transaction Reports Dashboard with real-time updates via webhooks and Plotly visualizations.",
+      description: "Production dashboard used daily at ZDT's Amusement Park for business analytics. Features real-time transaction reports via webhooks and Plotly visualizations.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/DailyDashboard",
       tags: ["Plotly", "React", "Node.js", "PostgreSQL", "Webhooks", "Real-time Updates"],
@@ -94,7 +94,7 @@ export default function Home() {
     },
     {
       title: "Webhooks Microservice",
-      description: "Webhooks Microservice syncing of Shopify transactions to a PostgreSQL database for real-time reporting and quick access to transaction data.",
+      description: "Production microservice powering ZDT's Amusement Park's real-time data pipeline. Syncs Shopify transactions to PostgreSQL database for live reporting and quick access to transaction data.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/pos-webhooks",
       tags: ["Node.js", "Shopify API", "Webhooks", "PostgreSQL", "Real-time Updates"],
@@ -107,7 +107,7 @@ export default function Home() {
     },
     {
       title: "Employee Time Tracking",
-      description: "Employee clock-in terminal and time tracking tools with administrative controls for industry-specific hours handling and live time-clock monitoring.",
+      description: "Employee time tracking system in daily use at ZDT's Amusement Park. Features clock-in terminals, administrative controls for industry-specific hours handling, and live time-clock monitoring.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/posdashboard-public/tree/main/client/src/components/ClockIn",
       tags: ["React", "Node.js", "PostgreSQL", "Authentication", "Role Management", "Reporting"],
@@ -128,7 +128,7 @@ export default function Home() {
     },
     {
       title: "Membership Management",
-      description: "Comprehensive membership access management system with recurring billing options via Shopify integration. Handles member check-ins and subscription management.",
+      description: "Production membership system managing thousands of active members at ZDT's Amusement Park. Features recurring billing via Shopify integration, member check-ins, and subscription management.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/posdashboard-public",
       tags: ["React", "Node.js", "PostgreSQL", "Shopify API", "GraphQL", "Subscription Management"],
@@ -141,7 +141,7 @@ export default function Home() {
     },
     {
       title: "Electron Business Platform",
-      description: "Comprehensive Electron wrapper providing system-level access and peripheral integration for POS operations. Enables direct hardware communication, local storage, and unified access to all business management systems.",
+      description: "Production Electron wrapper deployed across ZDT's Amusement Park operations. Provides system-level access and peripheral integration for POS operations, enabling direct hardware communication, local storage, and unified access to all business management systems.",
       type: "preview",
       githubUrl: "https://github.com/zdonhauser/electronpos-public",
       tags: ["Electron", "Node.js", "Hardware Integration", "System APIs", "Cross-Platform", "Business Operations"],
@@ -153,6 +153,19 @@ export default function Home() {
         {
           src: "/screenshots/menu.png",
           alt: "POS Menu Management System"
+        }
+      ]
+    },
+    {
+      title: "System Telemetry Dashboard (Portfolio Project)",
+      description: "Desktop application for macOS (Apple Silicon) that monitors and visualizes system telemetry. Displays CPU, GPU, memory, disk, network, and process statistics with interactive Plotly charts. Built with Electron, React 19, Redux Toolkit, and TypeScript to practice modern desktop development, featuring real-time data updates, desktop notifications, and data export functionality.",
+      type: "preview",
+      githubUrl: "https://github.com/zdonhauser/electron-resource-monitor",
+      tags: ["Electron", "React 19", "Redux Toolkit", "TypeScript", "Plotly.js", "SQLite", "System Monitoring", "Real-time Data", "macOS", "Apple Silicon"],
+      images: [
+        {
+          src: "/screenshots/resourcemonitor.png",
+          alt: "System Telemetry Dashboard - Real-time Monitoring"
         }
       ]
     },
